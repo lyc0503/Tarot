@@ -9,25 +9,26 @@
 /* Begin PBXBuildFile section */
 		18238482256A6785003D8994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18238481256A6785003D8994 /* AppDelegate.swift */; };
 		18238484256A6785003D8994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18238483256A6785003D8994 /* SceneDelegate.swift */; };
-		18238486256A6785003D8994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18238485256A6785003D8994 /* ViewController.swift */; };
 		18238489256A6785003D8994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18238487256A6785003D8994 /* Main.storyboard */; };
 		1823848B256A6790003D8994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1823848A256A6790003D8994 /* Assets.xcassets */; };
 		1823848E256A6790003D8994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1823848C256A6790003D8994 /* LaunchScreen.storyboard */; };
 		1823849B256ACA6C003D8994 /* TaroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823849A256ACA6C003D8994 /* TaroCard.swift */; };
 		1823849E256AD362003D8994 /* CardFlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823849D256AD362003D8994 /* CardFlipViewController.swift */; };
+		18AF893325762F5700A23FAF /* PickCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF893225762F5500A23FAF /* PickCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1823847E256A6785003D8994 /* Tarot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18238481256A6785003D8994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18238483256A6785003D8994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18238485256A6785003D8994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18238488256A6785003D8994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1823848A256A6790003D8994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1823848D256A6790003D8994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1823848F256A6790003D8994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1823849A256ACA6C003D8994 /* TaroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaroCard.swift; sourceTree = "<group>"; };
 		1823849D256AD362003D8994 /* CardFlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipViewController.swift; sourceTree = "<group>"; };
+		18AF89302575000000A23FAF /* GeneralString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralString.h; sourceTree = "<group>"; };
+		18AF893225762F5500A23FAF /* PickCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +63,9 @@
 			children = (
 				18238481256A6785003D8994 /* AppDelegate.swift */,
 				18238483256A6785003D8994 /* SceneDelegate.swift */,
-				18238485256A6785003D8994 /* ViewController.swift */,
+				18AF893225762F5500A23FAF /* PickCardViewController.swift */,
 				1823849A256ACA6C003D8994 /* TaroCard.swift */,
+				18AF89302575000000A23FAF /* GeneralString.h */,
 				18238487256A6785003D8994 /* Main.storyboard */,
 				1823849D256AD362003D8994 /* CardFlipViewController.swift */,
 				1823848A256A6790003D8994 /* Assets.xcassets */,
@@ -143,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18238486256A6785003D8994 /* ViewController.swift in Sources */,
+				18AF893325762F5700A23FAF /* PickCardViewController.swift in Sources */,
 				1823849B256ACA6C003D8994 /* TaroCard.swift in Sources */,
 				18238482256A6785003D8994 /* AppDelegate.swift in Sources */,
 				18238484256A6785003D8994 /* SceneDelegate.swift in Sources */,

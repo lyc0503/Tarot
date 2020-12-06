@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iDR-10-QcS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iDR-10-QcS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pick Card View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tarot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PickCardViewController" customModule="Tarot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6sT-OZ-nc8">
-                                <rect key="frame" x="20.5" y="290.5" width="373" height="464"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J9O-qV-FjH">
+                                <rect key="frame" x="20" y="339.5" width="374" height="271"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J9O-qV-FjH">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="228"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-UE-uIa">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="271"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tl6-qt-hj9">
-                                                <rect key="frame" x="0.0" y="0.0" width="119" height="228"/>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tl6-qt-hj9">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="234.5"/>
                                                 <state key="normal" image="card_back"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
@@ -33,11 +33,22 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="q3M-Xv-k0b" kind="show" id="tyw-Oe-PYk"/>
+                                                    <segue destination="q3M-Xv-k0b" kind="show" destinationCreationSelector="passPressed:" id="ick-Pz-4Nj"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQ0-HA-1ts">
-                                                <rect key="frame" x="127" y="0.0" width="119" height="228"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="過去" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwj-KD-nOX">
+                                                <rect key="frame" x="0.0" y="250.5" width="119.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vuF-qB-xma">
+                                        <rect key="frame" x="127.5" y="0.0" width="119" height="271"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQ0-HA-1ts">
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="234.5"/>
                                                 <state key="normal" image="card_back"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
@@ -48,11 +59,22 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="q3M-Xv-k0b" kind="show" id="dSU-re-jxZ"/>
+                                                    <segue destination="q3M-Xv-k0b" kind="show" destinationCreationSelector="presentPressed:" id="dSU-re-jxZ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nz-NY-fVF">
-                                                <rect key="frame" x="254" y="0.0" width="119" height="228"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRZ-bS-Kx8">
+                                                <rect key="frame" x="0.0" y="250.5" width="119" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YJw-aU-9Hk">
+                                        <rect key="frame" x="254.5" y="0.0" width="119.5" height="271"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nz-NY-fVF">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="234.5"/>
                                                 <state key="normal" image="card_back"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
@@ -63,83 +85,58 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="q3M-Xv-k0b" kind="show" id="PRo-Rg-jo1"/>
+                                                    <segue destination="q3M-Xv-k0b" kind="show" destinationCreationSelector="futurePressed:" id="PRo-Rg-jo1"/>
                                                 </connections>
                                             </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fku-6J-iv2">
-                                        <rect key="frame" x="0.0" y="236" width="373" height="228"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDp-Wu-Vht">
-                                                <rect key="frame" x="0.0" y="0.0" width="119" height="228"/>
-                                                <state key="normal" image="card_back"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                        <real key="value" value="0.80000000000000004"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="q3M-Xv-k0b" kind="show" id="4m1-Qv-1yo"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P28-1B-URb">
-                                                <rect key="frame" x="127" y="0.0" width="119" height="228"/>
-                                                <state key="normal" image="card_back"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                        <real key="value" value="0.80000000000000004"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="q3M-Xv-k0b" kind="show" id="644-dx-Ovl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYd-FF-OLy">
-                                                <rect key="frame" x="254" y="0.0" width="119" height="228"/>
-                                                <state key="normal" image="card_back"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                        <real key="value" value="0.80000000000000004"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="q3M-Xv-k0b" kind="show" id="Jfd-ud-nA2"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未來" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k72-Ml-Qj7">
+                                                <rect key="frame" x="0.0" y="250.5" width="119.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="靜下心來，選一張卡片" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMG-T5-znt">
-                                <rect key="frame" x="20.5" y="188" width="373" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="靜下心來 在心中默唸一遍想問的問題 然後順序翻開卡片" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMG-T5-znt">
+                                <rect key="frame" x="20.5" y="168" width="373" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAZ-n7-5UG">
+                                <rect key="frame" x="20.5" y="720" width="373" height="41"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySp-Yb-g35"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.18823529411764706" green="0.058823529411764705" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="J9O-qV-FjH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CzV-3F-TKg"/>
                             <constraint firstItem="jMG-T5-znt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="FAR-Sm-2rY"/>
-                            <constraint firstItem="6sT-OZ-nc8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.1" id="GzA-e5-UdH"/>
-                            <constraint firstItem="6sT-OZ-nc8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wdw-bl-8Th"/>
-                            <constraint firstItem="jMG-T5-znt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="XtB-D0-qan"/>
-                            <constraint firstItem="6sT-OZ-nc8" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.6" id="jTe-Zq-BSE"/>
+                            <constraint firstItem="jAZ-n7-5UG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GQt-yQ-1FC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J9O-qV-FjH" secondAttribute="trailing" constant="20" id="SJP-w0-hIF"/>
+                            <constraint firstItem="J9O-qV-FjH" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.35" id="VT9-R2-h81"/>
+                            <constraint firstItem="jMG-T5-znt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="XtB-D0-qan"/>
+                            <constraint firstItem="J9O-qV-FjH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hXe-jG-krQ"/>
                             <constraint firstItem="jMG-T5-znt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ntV-uO-b7c"/>
-                            <constraint firstItem="6sT-OZ-nc8" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="zyb-Qi-epB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jAZ-n7-5UG" secondAttribute="bottom" constant="101" id="wkL-HA-9DX"/>
+                            <constraint firstItem="jAZ-n7-5UG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="zPz-GW-shI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dop-1I-WgJ"/>
+                    <connections>
+                        <outlet property="futureCardBtn" destination="8Nz-NY-fVF" id="dFC-mW-I9I"/>
+                        <outlet property="pastCardBtn" destination="tl6-qt-hj9" id="e7c-5b-rb3"/>
+                        <outlet property="presentCardBtn" destination="oQ0-HA-1ts" id="YaH-pr-Ssq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,17 +169,26 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Woa-CM-pJv">
-                                <rect key="frame" x="31" y="742" width="352" height="31.5"/>
+                                <rect key="frame" x="31" y="772" width="352" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvu-Ai-Jyz">
-                                <rect key="frame" x="31" y="781.5" width="352" height="20.5"/>
+                                <rect key="frame" x="31" y="811.5" width="352" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5p-NZ-6nA">
+                                <rect key="frame" x="0.0" y="832" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2zT-xh-2Lz"/>
+                                </constraints>
+                                <state key="normal" title="©️星星療癒女神">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xbr-9i-euW"/>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.058823529409999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -191,11 +197,14 @@
                             <constraint firstItem="Woa-CM-pJv" firstAttribute="width" secondItem="fPI-pV-ud4" secondAttribute="width" multiplier="0.85" id="3hy-sB-zme"/>
                             <constraint firstItem="0KQ-5f-zCY" firstAttribute="centerX" secondItem="Xbr-9i-euW" secondAttribute="centerX" id="6pL-ZH-XTp"/>
                             <constraint firstItem="0KQ-5f-zCY" firstAttribute="height" secondItem="fPI-pV-ud4" secondAttribute="height" multiplier="0.5" id="BlR-Sw-bdr"/>
+                            <constraint firstItem="K5p-NZ-6nA" firstAttribute="centerX" secondItem="Xbr-9i-euW" secondAttribute="centerX" id="C0y-2r-uvT"/>
                             <constraint firstItem="Gvu-Ai-Jyz" firstAttribute="top" secondItem="Woa-CM-pJv" secondAttribute="bottom" constant="8" symbolic="YES" id="H9Z-rL-65W"/>
                             <constraint firstItem="Woa-CM-pJv" firstAttribute="centerX" secondItem="Xbr-9i-euW" secondAttribute="centerX" id="Rj3-tM-8Ok"/>
                             <constraint firstItem="Gvu-Ai-Jyz" firstAttribute="width" secondItem="Woa-CM-pJv" secondAttribute="width" id="SXC-k0-MjC"/>
                             <constraint firstItem="Gvu-Ai-Jyz" firstAttribute="centerX" secondItem="Woa-CM-pJv" secondAttribute="centerX" id="Zqn-pp-EUK"/>
-                            <constraint firstItem="Xbr-9i-euW" firstAttribute="bottom" secondItem="Gvu-Ai-Jyz" secondAttribute="bottom" constant="60" id="al5-Le-eHs"/>
+                            <constraint firstItem="Xbr-9i-euW" firstAttribute="bottom" secondItem="K5p-NZ-6nA" secondAttribute="bottom" id="akB-jx-iqM"/>
+                            <constraint firstItem="K5p-NZ-6nA" firstAttribute="width" secondItem="Xbr-9i-euW" secondAttribute="width" id="uGZ-9M-A0m"/>
+                            <constraint firstItem="K5p-NZ-6nA" firstAttribute="top" secondItem="Gvu-Ai-Jyz" secondAttribute="bottom" id="vOH-dE-3J6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sct-ZP-bLr"/>
@@ -207,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbg-Hu-bW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731.8840579710147" y="79.6875"/>
+            <point key="canvasLocation" x="1933" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TmO-Sp-wA9">
@@ -231,9 +240,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tyw-Oe-PYk"/>
+        <segue reference="ick-Pz-4Nj"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="card_back" width="720" height="1104"/>
+        <image name="card_back" width="746" height="1395"/>
     </resources>
 </document>
